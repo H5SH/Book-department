@@ -20,7 +20,7 @@ export default function HomePage() {
         file.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         file.shortDescription.toLowerCase().includes(searchTerm.toLowerCase()) ||
         file.author.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesCategory = selectedCategory === "All" || file.category === selectedCategory
+      const matchesCategory = selectedCategory === "All" || file.categories.includes(selectedCategory)
       return matchesSearch && matchesCategory
     })
   }, [searchTerm, selectedCategory])
@@ -50,13 +50,11 @@ export default function HomePage() {
         </div>
 
         {/* File Grid */}
-        <TooltipProvider>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredFiles.map((file) => (
-              <FileCard key={file.id} file={file} />
-            ))}
-          </div>
-        </TooltipProvider>
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {filteredFiles.map((file) => (
+          <FileCard key={file.id} file={file} />
+        ))}
+      </div>
 
         {/* No Results */}
         {filteredFiles.length === 0 && <EmptyState />}

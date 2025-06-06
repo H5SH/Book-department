@@ -1,112 +1,30 @@
 export interface FileData {
   id: number
   name: string
-  category: string
+  categories: string[]
   shortDescription: string
   fullDescription: string
   previewImage: string
-  fileType: string
+  type: string
   size: string
+  url: string
   author: string
 }
 
 export const files: FileData[] = [
   {
     id: 1,
-    name: "Advanced React Patterns",
-    category: "Programming",
-    shortDescription: "Modern React development techniques",
-    fullDescription:
-      "A comprehensive guide covering advanced React patterns including render props, higher-order components, compound components, and custom hooks. Perfect for developers looking to master React architecture and build scalable applications.",
-    previewImage: "/placeholder.svg?height=200&width=300",
-    fileType: "PDF",
-    size: "2.4 MB",
-    author: "John Smith",
+    name: "History of Constitution of Pakistan",
+    categories: ["Pakistan", "Law"],
+    url: "files/History of Constitution of Pakistan.pdf",
+    shortDescription: "A concise overview of Pakistan's constitutional journey, from independence to the present-day 1973 Constitution.",
+    fullDescription: "Explore the pivotal moments that shaped the Constitution of Pakistan in this brief yet informative summary. From the founding of Pakistan in 1947 to the adoption of the 1956, 1962, and finally the 1973 Constitution, this guide highlights key amendments, changes in governance, and the legal evolution that reflects the nation's democratic and political growth. Ideal for students, researchers, or anyone interested in Pakistan’s constitutional history.",
+    previewImage: "data:image/jpeg;base64,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",
+    type: "PDF",
+    size: "60 KB",
+    author: "Hasham Asad",
   },
-  {
-    id: 2,
-    name: "Digital Marketing Fundamentals",
-    category: "Business",
-    shortDescription: "Essential marketing strategies for digital age",
-    fullDescription:
-      "Learn the core principles of digital marketing including SEO, social media marketing, content strategy, email campaigns, and analytics. This guide provides practical insights for building successful online marketing campaigns.",
-    previewImage: "/placeholder.svg?height=200&width=300",
-    fileType: "PDF",
-    size: "1.8 MB",
-    author: "Sarah Johnson",
-  },
-  {
-    id: 3,
-    name: "Machine Learning Basics",
-    category: "Technology",
-    shortDescription: "Introduction to ML algorithms and concepts",
-    fullDescription:
-      "A beginner-friendly introduction to machine learning covering supervised and unsupervised learning, neural networks, decision trees, and practical implementation using Python. Includes hands-on examples and real-world applications.",
-    previewImage: "/placeholder.svg?height=200&width=300",
-    fileType: "PDF",
-    size: "3.2 MB",
-    author: "Dr. Michael Chen",
-  },
-  {
-    id: 4,
-    name: "Creative Writing Workshop",
-    category: "Literature",
-    shortDescription: "Techniques for compelling storytelling",
-    fullDescription:
-      "Develop your creative writing skills with proven techniques for character development, plot structure, dialogue, and narrative voice. Includes writing exercises, examples from published works, and tips for overcoming writer's block.",
-    previewImage: "/placeholder.svg?height=200&width=300",
-    fileType: "PDF",
-    size: "1.5 MB",
-    author: "Emma Williams",
-  },
-  {
-    id: 5,
-    name: "Financial Planning Guide",
-    category: "Business",
-    shortDescription: "Personal and business financial strategies",
-    fullDescription:
-      "Master the art of financial planning with comprehensive strategies for budgeting, investing, retirement planning, and risk management. Suitable for both personal finance and small business financial planning needs.",
-    previewImage: "/placeholder.svg?height=200&width=300",
-    fileType: "PDF",
-    size: "2.1 MB",
-    author: "Robert Davis",
-  },
-  {
-    id: 6,
-    name: "Web Design Principles",
-    category: "Technology",
-    shortDescription: "Modern UI/UX design fundamentals",
-    fullDescription:
-      "Explore the fundamental principles of web design including typography, color theory, layout composition, user experience design, and responsive design. Learn to create visually appealing and user-friendly websites.",
-    previewImage: "/placeholder.svg?height=200&width=300",
-    fileType: "PDF",
-    size: "2.7 MB",
-    author: "Lisa Anderson",
-  },
-  {
-    id: 7,
-    name: "Data Structures & Algorithms",
-    category: "Programming",
-    shortDescription: "Essential CS concepts for developers",
-    fullDescription:
-      "Master fundamental data structures and algorithms essential for software development. Covers arrays, linked lists, trees, graphs, sorting algorithms, and complexity analysis with practical coding examples.",
-    previewImage: "/placeholder.svg?height=200&width=300",
-    fileType: "PDF",
-    size: "4.1 MB",
-    author: "Alex Thompson",
-  },
-  {
-    id: 8,
-    name: "Modern Poetry Collection",
-    category: "Literature",
-    shortDescription: "Contemporary poems and analysis",
-    fullDescription:
-      "A curated collection of modern poetry featuring works from contemporary poets around the world. Includes detailed analysis, themes exploration, and insights into modern poetic techniques and movements.",
-    previewImage: "/placeholder.svg?height=200&width=300",
-    fileType: "PDF",
-    size: "1.2 MB",
-    author: "Maya Patel",
-  },
+
 ]
 
-export const categories = ["All", "Programming", "Business", "Technology", "Literature"]
+export const categories = ["All", "Pakistan", "Law", "Business", "Technology", "Literature"]
