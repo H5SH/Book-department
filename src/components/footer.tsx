@@ -1,5 +1,7 @@
 import { Book, Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import logo from "@/assets/book-department-logo.png"
 
 export function Footer() {
   return (
@@ -7,7 +9,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-3 mb-4 md:mb-0">
-            <Book className="h-6 w-6 text-blue-600" />
+            <Image src={logo} alt="Book Department" width={40} height={40}/>
             <span className="text-gray-900 font-semibold">The Book Department</span>
           </div>
 
