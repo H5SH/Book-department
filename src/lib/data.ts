@@ -15,7 +15,7 @@ export const files: FileData[] = [
   {
     id: 1,
     name: "History of Constitution of Pakistan",
-    categories: ["Pakistan", "Law"],
+    categories: ["Pakistan", "Law", "Constitution"],
     url: "files/History of Constitution of Pakistan.pdf",
     shortDescription: "A concise overview of Pakistan's constitutional journey, from independence to the present-day 1973 Constitution.",
     fullDescription: "Explore the pivotal moments that shaped the Constitution of Pakistan in this brief yet informative summary. From the founding of Pakistan in 1947 to the adoption of the 1956, 1962, and finally the 1973 Constitution, this guide highlights key amendments, changes in governance, and the legal evolution that reflects the nation's democratic and political growth. Ideal for students, researchers, or anyone interested in Pakistan’s constitutional history.",
@@ -24,7 +24,30 @@ export const files: FileData[] = [
     size: "60 KB",
     author: "Hasham Asad",
   },
-
+  {
+    id: 2,
+    name: "Amendments Of 1973 constitution of Pakistan",
+    categories: ["Pakistan", "Law", "Constitution"],
+    url: "files/Amendments of the 1973 Constitution.pdf",
+    shortDescription: "An overview of all 26 amendments to Pakistan's 1973 Constitution, highlighting key political, judicial, and federal reforms.",
+    fullDescription: "This document presents a comprehensive summary of the 26 amendments made to the Constitution of Pakistan since its adoption in 1973. Each amendment reflects the evolving political landscape of the country, from early legislative changes under Zulfikar Ali Bhutto to significant structural reforms under military and democratic regimes alike. Key developments include the shifting balance of power between the President and Parliament, the recognition of minorities, the establishment and revival of military courts, and the historic 18th Amendment which decentralized power to the provinces. This compilation serves as a chronological guide to Pakistan’s constitutional evolution, shedding light on the nation’s legal, political, and institutional transformation over five decades.",
+    previewImage: "https://media.licdn.com/dms/image/v2/D4D12AQGzZYkN6z38Ag/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1729153639631?e=2147483647&v=beta&t=GtAH-XzMkVezxg6QU2v6txf1NsThOsXpviWiTlUDwg4",
+    type: "PDF",
+    size: "79 KB",
+    author: "Hasham Asad",
+  },
+  {
+    id: 3,
+    name: "26th Amendment, Pakistan’s Constitution",
+    categories: ["Pakistan", "Law", "Constitution"],
+    url: "files/26th Amendment, Pakistan’s Constitution.pdf",
+    shortDescription: "A detailed breakdown of Pakistan’s 26th Constitutional Amendment, highlighting new fundamental rights, judicial reforms, and institutional restructuring.",
+    fullDescription: "The 26th Amendment to Pakistan’s 1973 Constitution introduces major legal, administrative, and judicial changes aimed at enhancing transparency, accountability, and institutional efficiency. It grants citizens the fundamental right to a clean and sustainable environment, sets a definitive timeline for the elimination of Riba (interest), and strengthens legislative oversight. The amendment also restructures the Judicial Commission of Pakistan (JCP), modifies the process for appointing the Chief Justice, and introduces judicial performance evaluations. Additional reforms include expanding civil award categories, redefining advisory roles in provincial assemblies, and limiting the Supreme Court's suo motu powers. This comprehensive amendment represents a significant shift towards democratic accountability and judicial independence in Pakistan’s governance structure.",
+    previewImage: "https://miro.medium.com/v2/resize:fit:1024/1*LXqRB-MKpR0K5plWVQdoIg.jpeg",
+    type: "PDF",
+    size: "132 KB",
+    author: "Hasham Asad",
+  }
 ]
 
-export const categories = ["All", "Pakistan", "Law", "Business", "Technology", "Literature"]
+export const categories = ["All", "Pakistan", "Law", "Constitution", "Business", "Technology", "Literature"]
